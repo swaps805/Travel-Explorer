@@ -1,0 +1,52 @@
+const CityData = [
+  {
+    imgPath: "./images/cities/tokyo.jpg",
+    name: "Tokyo",
+    desc: "Tokyo, the bustling capital of Japan, is known for its towering skyscrapers, historic temples, and vibrant culture. A city where tradition meets innovation, offering a unique blend of old and new.",
+  },
+  {
+    imgPath: "./images/cities/dubai.jpg",
+    name: "Dubai",
+    desc: "Dubai, a city of superlatives, is famed for its ultramodern architecture, luxury shopping, and vibrant nightlife. From the iconic Burj Khalifa to the expansive desert, Dubai offers a mix of adventure and opulence.",
+  },
+  {
+    imgPath: "./images/cities/singapore.jpg",
+    name: "Singapore",
+    desc: "Singapore, a global financial hub, is known for its lush green spaces, multicultural heritage, and futuristic skyline. Attractions like Marina Bay Sands and Gardens by the Bay highlight its blend of nature and modernity.",
+  },
+  {
+    imgPath: "./images/cities/newyork.jpg",
+    name: "New York",
+    desc: "New York City, the city that never sleeps, is renowned for its iconic landmarks such as Times Square, Central Park, and the Statue of Liberty. A melting pot of cultures, it's a center of art, fashion, and entertainment.",
+  },
+  {
+    imgPath: "./images/cities/frankfurt.jpg",
+    name: "Frankfurt",
+    desc: "Frankfurt, a major financial hub in Germany, is known for its futuristic skyline and well-preserved old town. With its blend of business, culture, and history, Frankfurt offers a unique European charm.",
+  },
+];
+
+export default CityData;
+
+
+/* CarouselComponent.css */
+.carousel-container {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .legend {
+    background: rgba(126, 249, 229, 0.356);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .carousel .slide img {
+    width: 80%;
+    height: auto;
+  }
+  
