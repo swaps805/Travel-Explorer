@@ -1,22 +1,14 @@
 import React, { useState } from "react";
-import "./SearchBar.css";
-import  {Card}  from "./Card";
-import flightData  from "./FlightData";
+import "./styles/SearchBar.css";
+import { Card } from "./Card";
 
-export const SearchBar = () => {
+const SearchBar = ({ onSearch, cities }) => {
   const [input, setInput] = useState("");
-  const [flights, setFlights] = useState([]);
-
-  
+  let deptCity = "";
 
   const handleSearch = () => {
-
-    const searchResults = flightData.filter(
-      (flight) => flight.flightName.toLowerCase() === input.toLocaleLowerCase()
-    );
-    setFlights(searchResults);
-
-    
+    onSearch(input); 
+    console.log(input); // Call the passed in onSearch function with the current input value
   };
 
   return (
@@ -25,16 +17,27 @@ export const SearchBar = () => {
         <input
           type="text"
           value={input}
-          onChange={(e) => setInput(String(e.target.value))}
+          onChange={(e) => setInput(e.target.value)}
           className="search-area"
         />
         <button onClick={handleSearch} className="search-btn">
           Search
         </button>
       </div>
-      {flights.map((flight, index) => (
-        <Card key={index} start={flight.start} end={flight.end} />
-      ))}
+      {cities.map((city, index) => {
+        if (index === 0) {
+          deptCity = city.name;
+          return null; // Skip rendering for the first city
+        } else {
+          return (
+            <Card key={index} start={deptCity} end={city.name} />
+          );
+        }
+      })}
     </div>
   );
 };
+
+export default SearchBar;
+
+

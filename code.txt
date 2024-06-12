@@ -1,52 +1,172 @@
-const CityData = [
-  {
-    imgPath: "./images/cities/tokyo.jpg",
-    name: "Tokyo",
-    desc: "Tokyo, the bustling capital of Japan, is known for its towering skyscrapers, historic temples, and vibrant culture. A city where tradition meets innovation, offering a unique blend of old and new.",
-  },
-  {
-    imgPath: "./images/cities/dubai.jpg",
-    name: "Dubai",
-    desc: "Dubai, a city of superlatives, is famed for its ultramodern architecture, luxury shopping, and vibrant nightlife. From the iconic Burj Khalifa to the expansive desert, Dubai offers a mix of adventure and opulence.",
-  },
-  {
-    imgPath: "./images/cities/singapore.jpg",
-    name: "Singapore",
-    desc: "Singapore, a global financial hub, is known for its lush green spaces, multicultural heritage, and futuristic skyline. Attractions like Marina Bay Sands and Gardens by the Bay highlight its blend of nature and modernity.",
-  },
-  {
-    imgPath: "./images/cities/newyork.jpg",
-    name: "New York",
-    desc: "New York City, the city that never sleeps, is renowned for its iconic landmarks such as Times Square, Central Park, and the Statue of Liberty. A melting pot of cultures, it's a center of art, fashion, and entertainment.",
-  },
-  {
-    imgPath: "./images/cities/frankfurt.jpg",
-    name: "Frankfurt",
-    desc: "Frankfurt, a major financial hub in Germany, is known for its futuristic skyline and well-preserved old town. With its blend of business, culture, and history, Frankfurt offers a unique European charm.",
-  },
-];
 
-export default CityData;
+[    {
+        "name": "Tokyo",
+        "img": "./images/cities/tokyo.jpg",
+        "coord": [35.682839, 139.759455],
+        "descp": "Tokyo, the bustling capital of Japan, is known for its towering skyscrapers, historic temples, and vibrant culture. A city where tradition meets innovation, offering a unique blend of old and new."
+    },
+    {
+        "name": "Dubai",
+        "img": "./images/cities/dubai.jpg",
+        "coord": [25.276987, 55.296249],
+        "descp": "Dubai, a city of superlatives, is famed for its ultramodern architecture, luxury shopping, and vibrant nightlife. From the iconic Burj Khalifa to the expansive desert, Dubai offers a mix of adventure and opulence."
+    },
+    {
+        "name": "Singapore",
+        "img": "./images/cities/singapore.jpg",
+        "coord": [1.352083, 103.819839],
+        "descp": "Singapore, a global financial hub, is known for its lush green spaces, multicultural heritage, and futuristic skyline. Attractions like Marina Bay Sands and Gardens by the Bay highlight its blend of nature and modernity."
+    },
+    {
+        "name": "New York",
+        "img": "./images/cities/newyork.jpg",
+        "coord": [40.712776, -74.005974],
+        "descp": "New York City, the city that never sleeps, is renowned for its iconic landmarks such as Times Square, Central Park, and the Statue of Liberty. A melting pot of cultures, it's a center of art, fashion, and entertainment."
+    },
+    {
+        "name": "Frankfurt",
+        "img": "./images/cities/frankfurt.jpg",
+        "coord": [50.110924, 8.682127],
+        "descp": "Frankfurt, a major financial hub in Germany, is known for its futuristic skyline and well-preserved old town. With its blend of business, culture, and history, Frankfurt offers a unique European charm."
+    }
+]
+-------------------------------------------------------------
+[
+    {
+        "name": "Toronto",
+        "img": "./images/cities/toronto.jpg",
+        "coord": [43.65107, -79.347015],
+        "descp": "Toronto, Canada's largest city, is known for its diverse culture, iconic CN Tower, and vibrant arts scene. It offers a dynamic mix of urban sophistication and natural beauty along Lake Ontario."
+    },
+    {
+        "name": "Paris",
+        "img": "./images/cities/paris.jpg",
+        "coord": [48.856613, 2.352222],
+        "descp": "Paris, the capital of France, is celebrated for its historic landmarks, world-class museums, and romantic ambiance. Famous for the Eiffel Tower, Notre-Dame Cathedral, and its charming streets, Paris is a global center for art, fashion, and cuisine."
+    },
+    {
+        "name": "Amsterdam",
+        "img": "./images/cities/amsterdam.jpg",
+        "coord": [52.367573, 4.904139],
+        "descp": "Amsterdam, the capital of the Netherlands, is known for its picturesque canals, historic architecture, and vibrant cultural scene. Renowned for its museums, such as the Rijksmuseum and Van Gogh Museum, it offers a unique blend of old-world charm and modern urban life."
+    },
+    {
+        "name": "Istanbul",
+        "img": "./images/cities/istanbul.jpg",
+        "coord": [41.008238, 28.978359],
+        "descp": "Istanbul, a city that straddles Europe and Asia, is famed for its rich history, stunning architecture, and vibrant markets. Highlights include the Hagia Sophia, the Blue Mosque, and the bustling Grand Bazaar, making it a melting pot of cultures and traditions."
+    },
+    {
+        "name": "Sydney",
+        "img": "./images/cities/sydney.jpg",
+        "coord": [-33.868820, 151.209296],
+        "descp": "Sydney, Australia's largest city, is renowned for its iconic Sydney Opera House, stunning harbor, and beautiful beaches. A dynamic metropolis with a laid-back lifestyle, Sydney offers a perfect blend of urban excitement and natural beauty."
+    }
+]
+-------------------------------------------------------------------
+[
+    {
+        "name": "San Francisco",
+        "img": "./images/cities/sanfrancisco.jpg",
+        "coord": [37.774929, -122.419418],
+        "descp": "San Francisco, known for its iconic Golden Gate Bridge, cable cars, and vibrant neighborhoods, is a cultural and technological hub. Its scenic beauty and unique architecture make it a popular destination."
+    },
+    {
+        "name": "Rome",
+        "img": "./images/cities/rome.jpg",
+        "coord": [41.902782, 12.496366],
+        "descp": "Rome, the capital of Italy, is a city rich in history and culture. Famous for landmarks such as the Colosseum, Vatican City, and ancient ruins, Rome offers a glimpse into the past while thriving in the present."
+    },
+    {
+        "name": "London",
+        "img": "./images/cities/london.jpg",
+        "coord": [51.507351, -0.127758],
+        "descp": "London, the capital of the United Kingdom, is known for its historic sites, diverse culture, and vibrant arts scene. From the Tower of London to the British Museum, it seamlessly blends history with modernity."
+    },
+    {
+        "name": "Zurich",
+        "img": "./images/cities/zurich.jpg",
+        "coord": [47.376887, 8.541694],
+        "descp": "Zurich, the largest city in Switzerland, is a global financial hub renowned for its quality of life. It offers picturesque views of Lake Zurich, a charming old town, and a thriving cultural scene."
+    },
+    {
+        "name": "Doha",
+        "img": "./images/cities/doha.jpg",
+        "coord": [25.276987, 51.520008],
+        "descp": "Doha, the capital of Qatar, is known for its futuristic skyline, cultural heritage, and luxurious lifestyle. Highlights include the Museum of Islamic Art, Souq Waqif, and the modern developments along the Corniche."
+    }
+]
+-------------------------------------------------------------------
+[
+    {
+        "name": "Bengaluru",
+        "img": "./images/cities/bengaluru.jpg",
+        "coord": [12.971599, 77.594566],
+        "descp": "Bengaluru, also known as Bangalore, is the capital of India's Karnataka state and a major IT hub. It's known for its pleasant climate, green spaces, and vibrant nightlife, as well as being a center for technology and innovation."
+    },
+    {
+        "name": "Male",
+        "img": "./images/cities/male.jpg",
+        "coord": [4.175496, 73.509347],
+        "descp": "Malé, the capital of the Maldives, is a bustling city known for its colorful buildings, mosques, and lively markets. It serves as the gateway to the Maldives' stunning islands and resorts, offering a blend of urban life and tropical paradise."
+    },
+    {
+        "name": "Bangkok",
+        "img": "./images/cities/bangkok.jpg",
+        "coord": [13.756331, 100.501762],
+        "descp": "Bangkok, the vibrant capital of Thailand, is known for its ornate temples, bustling street markets, and vibrant nightlife. From the Grand Palace to the floating markets, Bangkok offers a sensory-rich experience."
+    },
+    {
+        "name": "Kuala Lumpur",
+        "img": "./images/cities/kualalumpur.jpg",
+        "coord": [3.139003, 101.686855],
+        "descp": "Kuala Lumpur, the capital of Malaysia, is a modern metropolis known for its iconic Petronas Twin Towers, shopping malls, and diverse culinary scene. It offers a blend of skyscrapers, colonial architecture, and lush greenery."
+    },
+    {
+        "name": "Wellington",
+        "img": "./images/cities/wellington.jpg",
+        "coord": [-41.286461, 174.776230],
+        "descp": "Wellington, the capital of New Zealand, is known for its vibrant arts scene, picturesque harbor, and surrounding hills. With a compact city center, it offers easy access to museums, galleries, and outdoor adventures."
+    }
+]
+----------------------------------------------------
+[
+    {
+        "name": "Shanghai",
+        "img": "./images/cities/shanghai.jpg",
+        "coord": [31.230390, 121.473702],
+        "descp": "Shanghai, China's largest city, is a global financial hub known for its futuristic skyline, historic landmarks, and vibrant street life. From the Bund waterfront to the iconic Oriental Pearl Tower, Shanghai offers a blend of tradition and modernity."
+    },
+    {
+        "name": "Seoul",
+        "img": "./images/cities/seoul.jpg",
+        "coord": [37.566535, 126.977969],
+        "descp": "Seoul, the capital of South Korea, is a dynamic metropolis known for its modern skyscrapers, historic sites, and bustling street markets. From palaces like Gyeongbokgung to the vibrant nightlife of Gangnam, Seoul offers a unique mix of old and new."
+    },
+    {
+        "name": "Rio de Janeiro",
+        "img": "./images/cities/riodejaneiro.jpg",
+        "coord": [-22.906847, -43.172897],
+        "descp": "Rio de Janeiro, Brazil's vibrant seaside city, is famed for its stunning beaches, iconic landmarks, and lively culture. From the Christ the Redeemer statue to Copacabana Beach, Rio offers a blend of natural beauty and urban excitement."
+    },
+    {
+        "name": "Cape Town",
+        "img": "./images/cities/capetown.jpg",
+        "coord": [-33.924870, 18.424055],
+        "descp": "Cape Town, South Africa's coastal gem, is known for its stunning scenery, diverse culture, and rich history. From Table Mountain to the Cape Winelands, Cape Town offers a blend of adventure, relaxation, and culinary delights."
+    },
+    {
+        "name": "Cairo",
+        "img": "./images/cities/cairo.jpg",
+        "coord": [30.044420, 31.235712],
+        "descp": "Cairo, the bustling capital of Egypt, is a city steeped in history, with iconic landmarks such as the Pyramids of Giza and the Sphinx. With its vibrant markets, rich culture, and ancient ruins, Cairo offers a glimpse into the past."
+    },
+    {
+        "name": "Honolulu",
+        "img": "./images/cities/honolulu.jpg",
+        "coord": [21.306944, -157.858337],
+        "descp": "Honolulu, the capital of Hawaii, is known for its stunning beaches, surfing spots, and tropical climate. From Waikiki Beach to Diamond Head, Honolulu offers a blend of relaxation, outdoor adventures, and cultural experiences."
+    }
+]
 
-
-/* CarouselComponent.css */
-.carousel-container {
-    width: 50%;
-    margin: auto;
-  }
-  
-  .legend {
-    background: rgba(126, 249, 229, 0.356);
-    color: white;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    text-align: center;
-  }
-  
-  .carousel .slide img {
-    width: 80%;
-    height: auto;
-  }
-  
+{'AMS': 'Amsterdam', 'BKK': 'Bangkok', 'BLR': 'Bengaluru', 'CAI': 'Cairo', 'CDG': 'Paris', 'CPT': 'Cape Town', 'DOH': 'Doha', 'DXB': 'Dubai', 'FCO': 'Rome', 'FRA': 'Frankfurt', 'GIG': 'Rio de Janeiro', 'HNL': 'Honolulu', 'ICN': 'Seoul', 'IST': 'Istanbul', 'KUL': 'Kuala Lumpur', 'LHR': 'London', 'MLE': 'Male', 'NYC': 'New York', 'PVG': 'Shanghai', 'SFO': 'San Francisco', 'SIN': 'Singapore', 'SYD': 'Sydney', 'TYO': 'Tokyo', 'WLG': 'Wellington', 'YYZ': 'Toronto', 'ZRH': 'Zurich'}

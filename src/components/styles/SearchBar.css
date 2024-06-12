@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.181); 
+  padding: 20px; 
+  border-radius: 5px; 
+  margin-top: 50px;
+  /* position: relative; */
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-area {
+    flex-grow: 1;
+    border-radius: 15px;
+    border: 1px solid #cccccc6d;
+    background-color: rgba(255, 235, 205, 0.877);
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .search-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(210, 42, 30);
+  }

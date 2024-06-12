@@ -1,14 +1,16 @@
-
 import React, { useState } from "react";
-import {ComposableMap, ZoomableGroup, Geographies, Geography, Graticule, Line, Marker} from "react-simple-maps";
-import "./Map.css";
-import CityData from "./CityData";
+import { ComposableMap, ZoomableGroup, Geographies, Geography, Graticule, Line, Marker } from "react-simple-maps";
+import "./styles/Map.css";
 
-// const geoUrl = 
-//   "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
-const Map = () => {
-  const [position, setPosition] = useState({ coordinates: [0,0], zoom: 1})
-  const handleMove = (pos) => {setPosition(pos)}
+
+const Map = ({ cities }) => {
+  const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
+
+  const handleMove = (pos) => {
+    setPosition(pos);
+  };
+
+  let startCoord = [];
 
   return (
     <div className="map-container">
@@ -18,46 +20,46 @@ const Map = () => {
         height={500}
         projectionConfig={{
           scale: 147,
-          center: [0,0],
+          center: [0, 0],
           rotate: [-10, 0, 0],
         }}
       >
-        <ZoomableGroup zoom = {position.zoom} center = {position.coor} onMoveEnd = {handleMove}>
-            <Graticule stroke="grey" />
-            <Geographies
-              geography='/world.json'     
-            //   dont need public/ to access
-              fill="grey" // country color
-              stroke="white" // country border color
-              strokeWidth={0.5}
-            >
-              {({ geographies }) =>
-                geographies.map((geo) => (
-                  <Geography key={geo.rsmKey} geography={geo} />
-                ))
-              }
-            </Geographies>
-                {CityData.map((city, index) => {
-                      return (
-                        <Line
-                          key={index}
-                          from={[8.682127,50.110924 ]} // (log, lat) of Frankfurt
-                          to={[...city.geoCoord].reverse()} //geoCoord (lat,long) so revrse it
-                          stroke="#FF5533"
-                          strokeWidth={2}
-                          strokeLinecap="round"
-                        />
-                      );
-                })}
-                {CityData.map((city, index) => {
-                      return (
-                        <Marker coordinates={[...city.geoCoord].reverse()}>
-                          <circle r={4} fill="blue" />
-                        </Marker>
-                      );
-                })}
-
-
+        <ZoomableGroup zoom={position.zoom} center={position.coordinates} onMoveEnd={handleMove}>
+          <Graticule stroke="grey" />
+          <Geographies
+            geography='/world.json' // don't need public/ to access
+            fill="grey" // country color
+            stroke="white" // country border color
+            strokeWidth={0.5}
+          >
+            {({ geographies }) =>
+              geographies.map((geo) => (
+                <Geography key={geo.rsmKey} geography={geo} />
+              ))
+            }
+          </Geographies>
+          {cities.map((city, index) => {
+            if (index === 0) {
+              startCoord = [...city.coord].reverse();
+              return null;
+            } else {
+              return (
+                <Line
+                  key={index}
+                  from={startCoord} // (long, lat) of the first city
+                  to={[...city.coord].reverse()} // geoCoord (lat, long) so reverse it
+                  stroke="#FF5533"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                />
+              );
+            }
+          })}
+          {cities.map((city, index) => (
+            <Marker key={index} coordinates={[...city.coord].reverse()}>
+              <circle r={4} fill="blue" />
+            </Marker>
+          ))}
         </ZoomableGroup>
       </ComposableMap>
     </div>
@@ -65,4 +67,3 @@ const Map = () => {
 };
 
 export default Map;
-
