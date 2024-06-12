@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles/SearchBar.css";
 import { Card } from "./Card";
 
-const SearchBar = ({ onSearch, cities }) => {
+const SearchBar = ({ onSearch, cities, flightImg }) => {
   const [input, setInput] = useState("");
   let deptCity = "";
 
@@ -23,6 +23,9 @@ const SearchBar = ({ onSearch, cities }) => {
         <button onClick={handleSearch} className="search-btn">
           Search
         </button>
+      </div>
+      <div className="flight-img-container">
+      <img src={flightImg} alt="flight" className="flight-img" />
       </div>
       {cities.map((city, index) => {
         if (index === 0) {

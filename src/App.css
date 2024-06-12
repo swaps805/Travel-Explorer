@@ -5,8 +5,6 @@ body {
     font-family: sans-serif;
   }
 
-
-
 .main-container{
    display: flex;
    flex-direction: column; 
@@ -15,7 +13,11 @@ body {
 
 .top-container{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
 }
 
+.SearchBar, .Carousel {
+  flex: 1; /* This ensures that SearchBar and Carousel take up equal width */
+  margin: 0 10px; /* This adds some horizontal margin between the components */
+}

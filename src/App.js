@@ -8,16 +8,18 @@ import db from "./firebase";
 const App = () => {
   // const [flights, setFlights] = useState([]);
   const [cities, setCities] = useState([]);
+  const [flightImg, setflightImg] = useState("");
 
   const handleSearch = async (input) => {
     try {
       console.log("Searching for flight:", input);
       const docAirline = doc(db, "Airline", input);
       const docSnap = await getDoc(docAirline);
-      const destInfo = docSnap.data();
+      const flightInfo = docSnap.data();
 
       // console.log(docSnap.data());
-      const cityList = [destInfo.start, ...destInfo.end];
+      setflightImg(flightInfo.img); 
+      const cityList = [flightInfo.start, ...flightInfo.end];
       console.log(cityList);
 
       const cityInfo = [];
@@ -38,7 +40,7 @@ const App = () => {
   return (
     <div className="main-container">
       <div className='top-container'>   
-        <SearchBar onSearch={handleSearch} cities={cities} />
+        <SearchBar onSearch={handleSearch} cities={cities} flightImg={flightImg} />
         <Carousel cities={cities} />
       </div>
       <Map cities={cities} />
