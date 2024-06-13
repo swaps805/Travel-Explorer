@@ -1,0 +1,111 @@
+.chat-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(7, 137, 135, 0.5);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    z-index: 1000;
+    width: 400px; /* Adjust the width as needed */
+    height: 500px; /* Fixed height for the chat window */
+    overflow-y: auto; /* Add scrollbar when content overflows */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+  
+  .chat-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+  }
+  
+  .close-modal-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fedd09;
+    font-weight: 900;
+  }
+  
+  .messages-container {
+    margin-bottom: 10px;
+  }
+  
+  .user-message {
+    background: linear-gradient(to right bottom, rgba(230, 19, 184, 0.998), rgba(0, 195, 249, 0.957));
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px;
+    margin-bottom: 20px;
+    color: white;
+    font: Arial, sans-serif;
+    box-shadow:  0 0 10px rgb(231, 231, 216); ;
+    text-align: center;
+  }
+  
+  .ai-message {
+    background: linear-gradient(to right bottom, rgba(231, 231, 9, 0.941), rgba(54, 255, 54, 0.5));
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px;
+    margin-bottom: 20px;
+    color: black;
+    font: Areal, sans-serif;
+  }
+  
+  .input-container {
+    display: flex;
+  }
+  
+  .input-container input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .input-container button {
+    padding: 10px;
+    background-color: #e40d2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .input-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .modal-chat-button {
+    padding: 10px 20px; /* Add padding for better appearance */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; 
+    margin-top: 250px;
+    margin-left: 35px;/* Change cursor to pointer on hover */
+    box-shadow: 0 0 10px  5px rgba(255, 255, 0, 1);
+  }
+  
+  .modal-chat-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

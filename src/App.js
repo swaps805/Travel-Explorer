@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from "./components/SearchBar";
 import Carousel from "./components/Carousel"; 
 import Map from "./components/Map"; 
+import Chat from "./components/Chat";
 import {  doc, getDoc } from "firebase/firestore";
 import db from "./firebase"; 
 const App = () => {
@@ -43,7 +44,10 @@ const App = () => {
         <SearchBar onSearch={handleSearch} cities={cities} flightImg={flightImg} />
         <Carousel cities={cities} />
       </div>
-      <Map cities={cities} />
+      <div className='bottom-container'>
+        <Map cities={cities} />
+        <Chat className='chat-container'/>
+      </div>
     </div>
   );
 }

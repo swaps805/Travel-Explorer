@@ -17,7 +17,14 @@ body {
 
 }
 
+.bottom-container{
+  display: flex;
+  justify-content: space-between;
+}
+
 .SearchBar, .Carousel {
   flex: 1; /* This ensures that SearchBar and Carousel take up equal width */
   margin: 0 10px; /* This adds some horizontal margin between the components */
 }
+
+

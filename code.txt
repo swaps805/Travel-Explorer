@@ -170,3 +170,4 @@
 ]
 
 {'AMS': 'Amsterdam', 'BKK': 'Bangkok', 'BLR': 'Bengaluru', 'CAI': 'Cairo', 'CDG': 'Paris', 'CPT': 'Cape Town', 'DOH': 'Doha', 'DXB': 'Dubai', 'FCO': 'Rome', 'FRA': 'Frankfurt', 'GIG': 'Rio de Janeiro', 'HNL': 'Honolulu', 'ICN': 'Seoul', 'IST': 'Istanbul', 'KUL': 'Kuala Lumpur', 'LHR': 'London', 'MLE': 'Male', 'NYC': 'New York', 'PVG': 'Shanghai', 'SFO': 'San Francisco', 'SIN': 'Singapore', 'SYD': 'Sydney', 'TYO': 'Tokyo', 'WLG': 'Wellington', 'YYZ': 'Toronto', 'ZRH': 'Zurich'}
+

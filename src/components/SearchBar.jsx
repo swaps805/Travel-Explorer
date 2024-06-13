@@ -24,13 +24,15 @@ const SearchBar = ({ onSearch, cities, flightImg }) => {
           Search
         </button>
       </div>
-      <div className="flight-img-container">
-      <img src={flightImg} alt="flight" className="flight-img" />
-      </div>
+      {input && (
+        <div className="flight-img-container">
+          <img src={flightImg} alt="flight" className="flight-img" />
+        </div>
+      )}
       {cities.map((city, index) => {
         if (index === 0) {
           deptCity = city.name;
-          return null; // Skip rendering for the first city
+          return null; 
         } else {
           return (
             <Card key={index} start={deptCity} end={city.name} />

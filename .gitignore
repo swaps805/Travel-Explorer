@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 firekey.json
+code.txt
+.env
+db.py
